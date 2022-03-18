@@ -1,7 +1,7 @@
 package com.codeliner.shoppinglist.domain
 
-class GetShopItemUseCase {
+class GetShopItemUseCase (private val shopListRepository: ShopListRepository) {
     fun getShopItem(shopItemId: Int): ShopItem { //2203 принимает id и возвращает ShopItem
-        TODO()
+        return shopListRepository.getShopItem(shopItemId)
     }
 }
